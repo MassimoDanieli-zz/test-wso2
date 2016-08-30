@@ -1,0 +1,5 @@
+projectKey=HMRC:a009-ct
+serverUrl=http://10.102.83.142:9000
+dashboardUrl=http://10.102.83.142:9000/dashboard/index/HMRC:a009-ct
+ceTaskId=AVbbY2bd2FLzjmRXaWnL
+ceTaskUrl=http://10.102.83.142:9000/api/ce/task?id=AVbbY2bd2FLzjmRXaWnL

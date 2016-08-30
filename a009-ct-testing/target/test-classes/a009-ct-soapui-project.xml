@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="a009-ct" resourceRoot="" soapui-version="5.2.1" abortOnError="false" runType="SEQUENTIAL" id="6e1a399c-b285-4a4d-8b55-6a742de7d1c6" activeEnvironment="Default" xmlns:con="http://eviware.com/soapui/config">
+	<con:settings/>
+	<con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="a009-ct-api" type="rest" id="ae44db9e-ec44-45b7-b434-941ea986c5db" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<con:settings/>
+		
+		<con:definitionCache type="TEXT" rootPart=""/><con:endpoints/>
+		<con:resource name="/SERVICE-ONLY" path="/SERVICE-ONLY" id="ac8dec88-4f36-4d94-ad27-428f6030ee01">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="GET" method="GET" id="9c3ad65d-2ec1-4d61-8cde-e3ea6e99cbca">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element xmlns:my="http://mdg-esb-ct:8281/a009-ct-api">my:Response</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE"><con:mediaType>application/json; charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ser="http://mdg-esb-ct:8281/a009-ct-api/SERVICE-ONLY">ser:Response</con:element></con:representation><con:request name="Request 1" mediaType="application/xml" id="760f27c3-a844-4163-9a40-689688a8b186">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>${#Project#prop-a009-ct-address}</con:endpoint>
+					<con:request/>
+					<con:originalUri>http://mdg-esb-ct:8281/a009-ct-api/SERVICE-ONLY</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+	</con:interface>
+	<con:testSuite name="a009-ct-TestSuite" id="a3371ec5-2b6c-4358-9f63-324bbdea3120">
+		<con:settings/>
+		<con:runType>SEQUENTIAL</con:runType>
+		<con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="SERVICE-ONLY" searchProperties="true" id="10069113-f4ba-4b3e-a5ee-e2814ab71f8f">
+			<con:settings/>
+			<con:testStep type="restrequest" name="GET - Request 1" id="a16ff122-110f-4ebf-b0cd-715c2b9f2779">
+				<con:settings/>
+				<con:config service="a009-ct-api" resourcePath="/SERVICE-ONLY" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="GET - Request 1" mediaType="application/xml" id="edcdcb8c-90a7-43e6-8194-43c0ee21879c">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>${#Project#prop-a009-ct-address}</con:endpoint>
+						<con:request/>
+						<con:originalUri>http://mdg-esb-ct:8281/a009-ct-api/SERVICE-ONLY</con:originalUri>
+						
+						<con:assertion type="Simple Contains" id="c724cd1a-6488-4c5f-a72e-7d4edd12acd1" name="Is Status GREEN"><con:configuration><token>"status": "GREEN"</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="ec6c506b-ebf2-4fc2-8c64-0ca20e138db2" name="Is Service-Name VALID"><con:configuration><token>"service-name": "a009-ct"</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:parameters/>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:properties/>
+		</con:testCase>
+		<con:properties/>
+	</con:testSuite>
+	<con:properties>
+		<con:property>
+			<con:name>prop-a009-ct-address</con:name>
+			<con:value>http://mdg-esb-ct:8281/a009-ct-api</con:value>
+		</con:property>
+	</con:properties>
+	<con:wssContainer/>
+	<con:oAuth2ProfileContainer/>
+</con:soapui-project>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="a009-ct-readme" groupId="a.b.c.d.custom.resource" version="1.0.0" type="registry/resource" serverRole="GovernanceRegistry">
+        <item>
+            <file>a009-ct-readme.html</file>
+            <path>/_system/governance/html</path>
+            <mediaType>text/html</mediaType>
+        </item>
+    </artifact>
+    <artifact name="a009-ct-xslt-in.xsl" groupId="uk.gov.hmrc.mdg.adapter.ct.greg.resource" version="1.0.0" type="registry/resource" serverRole="GovernanceRegistry">
+        <item>
+            <file>xslt/a009-ct-xslt-in.xsl</file>
+            <path>/_system/governance/xslt</path>
+            <mediaType>application/xsl+xml</mediaType>
+        </item>
+    </artifact>
+    <artifact name="a009-ct-xslt-out.xsl" groupId="uk.gov.hmrc.mdg.adapter.ct.greg.resource" version="1.0.0" type="registry/resource" serverRole="GovernanceRegistry">
+        <item>
+            <file>xslt/a009-ct-xslt-out.xsl</file>
+            <path>/_system/governance/xslt</path>
+            <mediaType>application/xsl+xml</mediaType>
+        </item>
+    </artifact>
+</artifacts>

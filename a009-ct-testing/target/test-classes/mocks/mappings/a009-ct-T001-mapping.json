@@ -1,0 +1,19 @@
+{
+    "request": {
+        "method": "",
+        "url": "",
+        "headers": {
+              "MDG_Test_Scenario" : {
+                "equalTo" : "T001"
+               }
+        }
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+                    "Content-Type": "application/json;charset=UTF-8",
+                    "Mocking-Server": "wiremock"
+            },
+        "bodyFileName": "a009-ct-T001-response.txt"
+    }
+}
